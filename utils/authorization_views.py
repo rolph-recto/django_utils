@@ -1,10 +1,14 @@
 # utils/authorization_views.py
 # custom authorization
 
+from braces.views import AccessMixin
+
 
 class CustomAuthorizationMixin(AccessMixin):
     """
     allows the view to define a custom authorization function
+
+    extends the functionality of django-braces's AccessMixin
     """
 
     def is_authorized(self):
